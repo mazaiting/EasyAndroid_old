@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+// Lambda添加
+apply plugin: 'me.tatarka.retrolambda'
+
+/**
+ * 加载签名文件，文件内容如下：
+ # 文件路径
+ KEYSTORE_FILE = F:\\Program\\EasyAndroid\\signing.jks
+ # 文件密码
+ KEYSTORE_PASSWORD = 123456
+ # 文件别名
+ KEY_ALIAS = signing
+ # 文件密码
+ KEY_PASSWORD = 123456
+ */
+Properties props = new Properties()
+props.load(new FileInputStream(file("signing.properties")))
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "26.0.3"
+    defaultConfig {
+        applicationId "com.mazaiting.easyandroid"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    // 签名配置
+    signingConfigs {
+        release {
+            keyAlias props['KEY_ALIAS']
+            keyPassword props['KEY_PASSWORD']
+            storeFile file(props['KEYSTORE_FILE'])
+            storePassword props['KEYSTORE_PASSWORD']
+        }
+    }
+    buildTypes {
+        debug {
+            // 签名配置
+//            signingConfig signingConfigs.release
+        }
+        release {
+            minifyEnabled false
+            // 签名配置
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // Lambda添加
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':easy')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+
+    // --------------------------------注解相关------------------------------------
+    // 黄油刀---用于注解View
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    // Dagger2 注解
+    compile 'com.google.dagger:dagger:2.14'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.14'
+}

@@ -4,46 +4,46 @@
 # 项目结构
 ### easy Library
 --com.mazaiting.easy<Br/>
-	--app<Br/>
-		--AppBlockCanaryContext.java<Br/>
-		--ApplicationComponent.java<Br/>
-		--BaseApplication.java<Br/>
-	--base<Br/>
-		--activity<Br/>
-			--BaseActivity.java<Br/>
-			--BaseMultiStateActivity.java<Br/>
-		--fragment<Br/>
-			--BaseFragment.java<Br/>
-			--BaseLazyFragment.java<Br/>
-			--BaseLazyMultiStateFragment.java<Br/>
-		--interfaces<Br/>
-			--IView.java<Br/>
-		--mvp<Br/>
-			--IBasePresenter.java<Br/>
-			--IBaseView.java<Br/>
-		--presenter<Br/>
-			--BasePresenter.java<Br/>
-	--config<Br/>
-		--BaseConfig.java<Br/>
-		--Constant.java<Br/>
-	--net<Br/>
-		--BaseObserver.java<Br/>
-	--utils<Br/>
-		--NetUtil.java<Br/>
-		--RxScheduler.java<Br/>
+	----app<Br/>
+		------AppBlockCanaryContext.java<Br/>
+		------ApplicationComponent.java<Br/>
+		------BaseApplication.java<Br/>
+	----base<Br/>
+		------activity<Br/>
+			--------BaseActivity.java<Br/>
+			--------BaseMultiStateActivity.java<Br/>
+		------fragment<Br/>
+			--------BaseFragment.java<Br/>
+			--------BaseLazyFragment.java<Br/>
+			--------BaseLazyMultiStateFragment.java<Br/>
+		------interfaces<Br/>
+			--------IView.java<Br/>
+		------mvp<Br/>
+			--------IBasePresenter.java<Br/>
+			--------IBaseView.java<Br/>
+		------presenter<Br/>
+			--------BasePresenter.java<Br/>
+	----config<Br/>
+		------BaseConfig.java<Br/>
+		------Constant.java<Br/>
+	----net<Br/>
+		------BaseObserver.java<Br/>
+	----utils<Br/>
+		------NetUtil.java<Br/>
+		------RxScheduler.java<Br/>
 
 ### widget Library<Br/>
 --com.mazaiting.widget<Br/>
-	--multistate<Br/>
-		--MultiStateView.java<Br/>
-		--SimpleMultiStateView.java<Br/>
-	--view<Br/>
-		--IteView.java<Br/>
-		--ItiView.java<Br/>
-		--ItsView.java<Br/>
+	----multistate<Br/>
+		------MultiStateView.java<Br/>
+		------SimpleMultiStateView.java<Br/>
+	----view<Br/>
+		------IteView.java<Br/>
+		------ItiView.java<Br/>
+		------ItsView.java<Br/>
 
 *********************************************************************************<Br/>
-**********************************easy Library***********************************<Br/>
+\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\***easy Library**\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*<Br/>
 *********************************************************************************<Br/>
 
 # app 包<Br/>
@@ -70,9 +70,9 @@ BaseLazyMultiStateFragment继承自BaseLazyFragment，且使用了SimpleMultiSta
 ### BasePresenter<Br/>
 主Module中创建的Presenter必须继承自BasePresenter，来进行对View的绑定。
 
-*********************************************************************************<Br/>
-**********************************widget Module**********************************<Br/>
-*********************************************************************************<Br/>
+***********************************************************************************<Br/>
+\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\***widget Library**\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*<Br/>
+***********************************************************************************<Br/>
 ### widget Library<Br/>
 # multistate包<Br/>
 ###SimpleMultiStateView使用<Br/>

@@ -2,7 +2,7 @@ package com.mazaiting.easyandroid.module;
 
 import android.content.Context;
 
-import com.mazaiting.easy.app.app.BaseApplication;
+import com.mazaiting.easy.app.BaseApplication;
 
 import javax.inject.Singleton;
 

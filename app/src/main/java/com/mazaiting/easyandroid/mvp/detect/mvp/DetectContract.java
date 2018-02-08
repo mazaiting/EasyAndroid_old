@@ -1,7 +1,7 @@
 package com.mazaiting.easyandroid.mvp.detect.mvp;
 
-import com.mazaiting.easy.app.mvp.IBasePresenter;
-import com.mazaiting.easy.app.mvp.IBaseView;
+import com.mazaiting.easy.base.mvp.IBasePresenter;
+import com.mazaiting.easy.base.mvp.IBaseView;
 import com.mazaiting.easyandroid.mvp.detect.bean.DetectBean;
 
 /**

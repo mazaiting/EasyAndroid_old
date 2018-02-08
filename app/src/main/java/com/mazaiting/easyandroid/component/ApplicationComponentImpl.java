@@ -1,6 +1,6 @@
 package com.mazaiting.easyandroid.component;
 
-import com.mazaiting.easy.app.app.ApplicationComponent;
+import com.mazaiting.easy.app.ApplicationComponent;
 import com.mazaiting.easyandroid.module.ApiModule;
 import com.mazaiting.easyandroid.module.ApplicationModule;
 import com.mazaiting.easyandroid.module.NetModule;

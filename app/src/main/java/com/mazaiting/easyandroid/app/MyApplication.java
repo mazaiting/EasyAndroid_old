@@ -1,6 +1,6 @@
 package com.mazaiting.easyandroid.app;
 
-import com.mazaiting.easy.app.app.BaseApplication;
+import com.mazaiting.easy.app.BaseApplication;
 import com.mazaiting.easy.config.BaseConfig;
 import com.mazaiting.easyandroid.component.DaggerApplicationComponentImpl;
 import com.mazaiting.easyandroid.config.Config;

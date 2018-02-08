@@ -8,8 +8,7 @@ import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.franmontiel.persistentcookiejar.PersistentCookieJar;
 import com.franmontiel.persistentcookiejar.cache.SetCookieCache;
 import com.franmontiel.persistentcookiejar.persistence.SharedPrefsCookiePersistor;
-import com.mazaiting.easy.app.app.BaseApplication;
-import com.mazaiting.easy.config.BaseConfig;
+import com.mazaiting.easy.app.BaseApplication;
 import com.mazaiting.easy.config.Constant;
 
 import java.util.concurrent.TimeUnit;

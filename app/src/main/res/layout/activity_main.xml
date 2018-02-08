@@ -1,19 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.mazaiting.easyandroid.mvp.detect.mvp.MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+    <com.mazaiting.widget.multistate.SimpleMultiStateView
+        android:id="@+id/simpleMultiStateView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:empty="@layout/view_empty"
+        app:fail="@layout/view_failed"
+        app:loading="@layout/view_loading"
+        app:no_net="@layout/view_no_net">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.mazaiting.widget.view.IteView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hint_txt_ite="请输入用户名"
+                app:pic_ite="@mipmap/ic_launcher"
+                app:txt_ite="用户名:"
+                />
+            <com.mazaiting.widget.view.ItiView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:pic_iti="@mipmap/ic_launcher"
+                app:txt_iti="属性"/>
+            <com.mazaiting.widget.view.ItsView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:pic_its="@mipmap/ic_launcher"
+                app:txt_its="菜单"
+                app:menu_its="@array/its_view_menu"/>
+        </LinearLayout>
+    </com.mazaiting.widget.multistate.SimpleMultiStateView>
+
 </RelativeLayout>

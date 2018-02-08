@@ -4,7 +4,7 @@ import android.app.Application;
 
 import com.facebook.stetho.Stetho;
 import com.github.moduth.blockcanary.BlockCanary;
-import com.mazaiting.easy.app.app.AppBlockCanaryContext;
+import com.mazaiting.easy.app.AppBlockCanaryContext;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.Logger;
 import com.squareup.leakcanary.LeakCanary;
@@ -83,7 +83,7 @@ public abstract class BaseConfig {
     }
 
     /**
-     * 初始化
+     * 初始化 在谷歌浏览器中输入 chrome://inspect#device
      * @param application application 全局Application
      */
     private void initStetho(Application application) {

@@ -1,7 +1,7 @@
 package com.mazaiting.easyandroid.mvp.detect.mvp;
 
 import com.mazaiting.easy.net.BaseObserver;
-import com.mazaiting.easy.presenter.BasePresenter;
+import com.mazaiting.easy.base.presenter.BasePresenter;
 import com.mazaiting.easy.utils.RxScheduler;
 import com.mazaiting.easyandroid.config.Config;
 import com.mazaiting.easyandroid.mvp.detect.api.DetectApi;
@@ -36,6 +36,7 @@ public class DetectPresenter extends BasePresenter<DetectContract.View> implemen
                 .subscribe(new BaseObserver<DetectBean>() {
                     @Override
                     protected void onSuccess(DetectBean detectBean) {
+                        mView.onShowSuccess();
                         mView.loadData(detectBean);
                     }
 

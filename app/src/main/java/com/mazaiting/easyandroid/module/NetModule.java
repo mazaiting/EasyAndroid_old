@@ -3,10 +3,9 @@ package com.mazaiting.easyandroid.module;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
-import com.mazaiting.easy.app.app.BaseApplication;
+import com.mazaiting.easy.app.BaseApplication;
 import com.mazaiting.easy.utils.NetUtil;
 
-import javax.inject.Named;
 import javax.inject.Singleton;
 
 import dagger.Module;
